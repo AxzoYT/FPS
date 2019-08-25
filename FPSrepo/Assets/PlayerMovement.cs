@@ -7,14 +7,16 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody playerRB;
 
-
     public KeyCode strafeLeft = KeyCode.A;
     public KeyCode strafeRight = KeyCode.D;
     public KeyCode moveForward = KeyCode.W;
     public KeyCode moveBackward = KeyCode.S;
+    public KeyCode Jump = KeyCode.Space;
 
 
     public float playerMovementSpeed;
+    public float jumpPower;
+
 
 
     void Start()
@@ -24,7 +26,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Input.mousePosition);
+        //Debug.Log(Input.mousePosition);
+
+
+        if (Input.mousePresent == true)
+        {
+        transform.RotateAround(playerRB.position, Vector3.up, Input.GetAxis("Mouse X"));
+        transform.RotateAround(playerRB.position, Vector3.zero, -Input.GetAxis("Mouse Y"));
+        }
+            
+
+
+
+        Debug.Log(Input.GetAxis("Mouse X"));
 
 
 
@@ -45,5 +59,11 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(0, 0, -playerMovementSpeed);
         }
+        if (Input.GetKeyDown(Jump))
+        {
+            playerRB.AddRelativeForce(0, jumpPower, 0);
+        }
+
     }
+
 }
