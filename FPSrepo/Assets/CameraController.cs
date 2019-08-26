@@ -5,6 +5,10 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     private Vector3 offset;
+    public float maxLookUpAngle = 270;
+    public float maxLookDownAngle = 90;
+
+    
     void Start()
     {
         offset = transform.position - player.transform.position;
@@ -12,9 +16,25 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (Input.mousePresent == true)
+        if (Input.mousePresent)
         {
-            //transform.Rotate(0,transform.position.y + Input.GetAxis("Mouse Y"),0);
+            transform.RotateAround(transform.position, transform.right, -Input.GetAxis("Mouse Y"));
+        }
+        if (transform.localRotation.eulerAngles.z > 0.15f || transform.localRotation.eulerAngles.z < -0.15f)
+        {
+            if (transform.localRotation.eulerAngles.x > maxLookUpAngle)
+            {
+                transform.eulerAngles = new Vector3(maxLookUpAngle, player.transform.eulerAngles.y - 90f, 0f);
+            }
+
+            if (transform.localRotation.eulerAngles.x < maxLookDownAngle)
+            {
+                transform.eulerAngles = new Vector3(maxLookDownAngle, player.transform.eulerAngles.y - 90f, 0f);
+            }
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(transform.localRotation.eulerAngles.x, player.transform.eulerAngles.y - 90f, 0f);
         }
     }
     void LateUpdate()
