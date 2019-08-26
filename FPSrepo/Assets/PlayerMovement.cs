@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.mousePresent == true)
         {
         transform.RotateAround(playerRB.position, Vector3.up, Input.GetAxis("Mouse X"));
-        transform.RotateAround(playerRB.position, Vector3.zero, -Input.GetAxis("Mouse Y"));
+        //transform.RotateAround(playerRB.position, Vector3.zero, -Input.GetAxis("Mouse Y"));
         }
             
 
