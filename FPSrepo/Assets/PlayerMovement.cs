@@ -29,16 +29,15 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(Input.mousePosition);
 
 
-        if (Input.mousePresent == true)
+        if (Input.mousePresent)
         {
-        transform.RotateAround(playerRB.position, Vector3.up, Input.GetAxis("Mouse X"));
-        transform.RotateAround(playerRB.position, Vector3.zero, -Input.GetAxis("Mouse Y"));
+            transform.RotateAround(playerRB.position, transform.up, Input.GetAxis("Mouse X"));
         }
             
 
 
 
-        Debug.Log(Input.GetAxis("Mouse X"));
+        //Debug.Log(Input.GetAxis("Mouse X"));
 
 
 
