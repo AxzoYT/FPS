@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower;
 
 
-
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
@@ -32,14 +31,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.mousePresent == true)
         {
         transform.RotateAround(playerRB.position, Vector3.up, Input.GetAxis("Mouse X"));
-        transform.RotateAround(playerRB.position, Vector3.zero, -Input.GetAxis("Mouse Y"));
+        //transform.RotateAround(playerRB.position, Vector3.left, -Input.GetAxis("Mouse Y"));
         }
-            
-
 
 
         Debug.Log(Input.GetAxis("Mouse X"));
-
+        //Debug.Log(Input.GetAxis("Mouse Y"));
 
 
 
