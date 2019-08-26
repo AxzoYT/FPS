@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            transform.eulerAngles = new Vector3(transform.localRotation.eulerAngles.x, player.transform.eulerAngles.y - 90f, 0f);
+            transform.eulerAngles = new Vector3(transform.localRotation.eulerAngles.x, player.transform.eulerAngles.y - 0f, 0f);
         }
     }
     void LateUpdate()
