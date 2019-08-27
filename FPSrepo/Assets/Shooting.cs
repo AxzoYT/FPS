@@ -6,7 +6,8 @@ public class Shooting : MonoBehaviour
 {
     public KeyCode Fire = KeyCode.Mouse0;
     public GameObject Ammo;
-    public GameObject spawnPoint;
+    public float projectileSpeed = 200;
+
 
     void Start()
     {
@@ -15,11 +16,10 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(Fire))
+        if (Input.GetKeyDown(Fire))
         {
-            GameObject bullet = Instantiate(Ammo, transform.position + (Vector3.zero * 1), Quaternion.identity);
-            bullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 10000);
+            GameObject bullet = Instantiate(Ammo, transform.position, transform.rotation);
+            bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * projectileSpeed);
         }
-
     }
 }
