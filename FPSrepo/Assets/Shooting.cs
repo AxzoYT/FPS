@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(Fire))
+        if (Input.GetKey(Fire))
         {
             Instantiate(Ammo,(Vector3.up), Quaternion.LookRotation(Vector3.forward));
         }
