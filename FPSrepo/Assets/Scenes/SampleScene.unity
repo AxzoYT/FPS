@@ -503,8 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fire: 323
-  Ammo: {fileID: 7598449019861112269, guid: 984b934336d595645a1e39cb82261eb4, type: 3}
-  bulletSpawnPoint: {fileID: 1906616729}
+  Ammo: {fileID: 7264695865312264446, guid: 984b934336d595645a1e39cb82261eb4, type: 3}
+  spawnPoint: {fileID: 0}
 --- !u!1 &2012455664
 GameObject:
   m_ObjectHideFlags: 0
