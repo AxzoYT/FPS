@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public KeyCode Fire = KeyCode.Mouse0;
     public GameObject Ammo;
-    public float projectileSpeed = 200;
+    public float projectileSpeed = 2000;
 
 
     void Start()
@@ -16,10 +16,10 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(Fire))
+        if (Input.GetKey(Fire))
         {
-            GameObject bullet = Instantiate(Ammo, transform.position, transform.rotation);
-            bullet.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * projectileSpeed);
+            var bullet = Instantiate(Ammo, transform.position, transform.rotation);
+            bullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * projectileSpeed);
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3530369282836477302}
   - component: {fileID: 1123311368887131302}
-  - component: {fileID: 8078545858548187936}
+  - component: {fileID: 2306606238310410142}
   m_Layer: 0
   m_Name: BulletWrapper
   m_TagString: Untagged
@@ -49,8 +49,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &8078545858548187936
-BoxCollider:
+--- !u!136 &2306606238310410142
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -59,9 +59,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.36333406, y: 0.37589347, z: 0.96070707}
-  m_Center: {x: 0.0026022196, y: -0.009847343, z: 0.050834954}
+  m_Radius: 0.05882503
+  m_Height: 0.33064145
+  m_Direction: 2
+  m_Center: {x: -0.0531608, y: -0.0070126653, z: -0.15798798}
 --- !u!1001 &2442818151143857452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,17 +88,17 @@ PrefabInstance:
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.64
+      value: -0.218
       objectReference: {fileID: 0}
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
@@ -142,17 +143,17 @@ PrefabInstance:
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3744733584408816768, guid: 984b934336d595645a1e39cb82261eb4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7598449019861112269, guid: 984b934336d595645a1e39cb82261eb4, type: 3}
