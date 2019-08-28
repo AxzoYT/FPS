@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(Input.mousePosition);
 
 
         if (Input.mousePresent)
@@ -33,10 +32,6 @@ public class PlayerMovement : MonoBehaviour
             transform.RotateAround(playerRB.position, transform.up, Input.GetAxis("Mouse X"));
         }
 
-
-        Debug.Log(Input.GetAxis("Mouse X"));
-        //Debug.Log(Input.GetAxis("Mouse Y"));
-        //Debug.Log(Input.GetAxis("Mouse X"));
 
 
 
